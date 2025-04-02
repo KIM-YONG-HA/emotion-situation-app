@@ -21,7 +21,7 @@
 
       <div class="mt-8 flex flex-wrap justify-center gap-4">
         <a
-          href="/maumcheck/write.php"
+          href="/write"
           class="w-48 h-16 bg-blue-700 text-white rounded-lg flex items-center justify-center space-x-2 font-bold text-base hover:bg-blue-800 transition duration-200 shadow-md"
         >
           <i class="fas fa-pencil-alt text-xl"></i>
@@ -67,17 +67,34 @@
   </section>
 
   <!-- 프로세스 안내 -->
+  <!-- How it works -->
   <section class="bg-gray-50 py-24">
     <div class="max-w-[1200px] mx-auto px-4 text-center">
-      <h2 class="text-2xl font-semibold mb-10">어떻게 작동하나요?</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-        <div v-for="(step, idx) in steps" :key="idx">
-          <div class="text-4xl mb-2 text-gray-600"><i :class="step.icon"></i></div>
-          <p class="font-semibold">{{ step.title }}</p>
+        <h2 class="text-2xl font-semibold mb-10">어떻게 작동하나요?</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div>
+            <div class="text-4xl mb-2 text-gray-600"><i class="fas fa-comments"></i></div>
+            <p class="font-semibold">1. 상담 글 입력</p>
+          </div>
+          <div>
+            <div class="text-4xl mb-2 text-gray-600"><i class="fas fa-brain"></i></div>
+            <p class="font-semibold">2. 감정 상황 분석</p>
+          </div>
+          <div>
+            <div class="text-4xl mb-2 text-gray-600"><i class="fas fa-clipboard-check"></i></div>
+            <p class="font-semibold">3. 자가검진 및 상담 추천</p>
+          </div>
+          <div>
+            <div class="text-4xl mb-2 text-gray-600"><i class="fas fa-phone"></i></div>
+            <p class="font-semibold">4. 맞춤 상담 연결</p>
+          </div>
         </div>
       </div>
-    </div>
+      
   </section>
+
+
+
 </template>
 
 <script setup>
@@ -85,9 +102,9 @@ import { ref, onMounted } from 'vue'
 
 // 배경 이미지 순환
 const bgImages = [
-  '/maumcheck/public/img/main/visual_bg_01.jpg',
-  '/maumcheck/public/img/main/visual_bg_02.jpg',
-  '/maumcheck/public/img/main/visual_bg_03.jpg'
+  'img/main/visual_bg_01.jpg',
+  'img/main/visual_bg_02.jpg',
+  'img/main/visual_bg_03.jpg'
 ]
 
 const current = ref(0)
@@ -116,51 +133,46 @@ const cards = [
     category: '정신 건강 문제',
     color: 'text-blue-500',
     title: '댓글 좀 달아주세요 도대체 어떻게 해야할지 모르겠어요',
-    preview: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit...',
+    preview: 'orem ipsum, dolor sit amet consectetur adipisicing elit. Ex a nihil debitis facilis corporis dolorem ullam quis ut earum sequi ',
     tags: ['응원', '절실', '정신병']
   },
   {
     category: '가족 및 대인관계 문제',
     color: 'text-green-500',
     title: '사람들의 눈치를 너무 많이 봐서 힘들어요',
-    preview: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit...',
+    preview: 'orem ipsum, dolor sit amet consectetur adipisicing elit. Ex a nihil debitis facilis corporis dolorem ullam quis ut earum sequi ',
     tags: ['자존감', '상처', '사회적']
   },
   {
     category: '기타',
     color: 'text-purple-500',
     title: '가장 나다울 때가 가장',
-    preview: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit...',
+    preview: 'orem ipsum, dolor sit amet consectetur adipisicing elit. Ex a nihil debitis facilis corporis dolorem ullam quis ut earum sequi ',
     tags: ['나다움', '자기표현']
   },
   {
     category: '학교폭력 및 학대',
     color: 'text-red-500',
     title: '학교에서 따돌림을 당하고 있어요',
-    preview: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit...',
+    preview: 'orem ipsum, dolor sit amet consectetur adipisicing elit. Ex a nihil debitis facilis corporis dolorem ullam quis ut earum sequi ',
     tags: ['왕따', '전학고민', '외로움']
   },
   {
     category: '민감한 피해 경험',
     color: 'text-orange-500',
     title: '아직도 그날의 기억에서 벗어나지 못해요',
-    preview: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit...',
+    preview: 'orem ipsum, dolor sit amet consectetur adipisicing elit. Ex a nihil debitis facilis corporis dolorem ullam quis ut earum sequi ',
     tags: ['소음', '스트레스', '예민']
   },
   {
     category: '진로 고민',
     color: 'text-yellow-500',
     title: '진로에 대한 고민이 끝이 없어요',
-    preview: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit...',
+    preview: 'orem ipsum, dolor sit amet consectetur adipisicing elit. Ex a nihil debitis facilis corporis dolorem ullam quis ut earum sequi ',
     tags: ['진로고민', '불안', '자기이해']
   }
 ]
 
-// 작동 순서 안내
-const steps = [
-  { icon: 'fas fa-comments', title: '1. 상담 글 입력' },
-  { icon: 'fas fa-brain', title: '2. 감정 상황 분석' },
-  { icon: 'fas fa-clipboard-check', title: '3. 자가검진 및 상담 추천' },
-  { icon: 'fas fa-phone', title: '4. 맞춤 상담 연결' }
-]
+
+
 </script>
