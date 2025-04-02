@@ -13,11 +13,14 @@
     <div class="absolute inset-0 bg-black opacity-75 z-5"></div>
 
     <div class="relative z-10 flex flex-col items-center justify-center min-h-[65vh] px-4 text-center">
-      <h1 class="text-3xl md:text-4xl font-bold leading-relaxed">
-        당신의 마음을 분석하고,<br />
-        <span class="text-blue-600">가장 적절한 도움을 드릴게요.</span>
+      <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-relaxed text-center">
+        당신의 마음을 분석하고,<br>
+        <span class="text-blue-600 block">가장 적절한 도움을 드릴게요.</span>
       </h1>
-      <p class="mt-4 text-gray-200 text-xl">어떤 방법으로 상담하시겠어요?</p>
+      <p class="mt-4 text-gray-200 text-base sm:text-lg md:text-xl lg:text-2xl">
+        어떤 방법으로 상담하시겠어요?
+      </p>
+
 
       <div class="mt-8 flex flex-wrap justify-center gap-4">
         <a
