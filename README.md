@@ -7,3 +7,6 @@
 - VUE 3
 - Fast API or Flask API
 - Docker / Git / EC2
+-
+
+
