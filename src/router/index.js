@@ -4,6 +4,7 @@ import MainLayout from '@/layouts/MainLayout.vue'
 import SubLayout from '@/layouts/SubLayout.vue'
 
 import MainPage from '@/views/pages/MainPage.vue'
+import WritePage from '@/views/pages/WritePage.vue'
 
 
 const routes = [
@@ -14,11 +15,25 @@ const routes = [
     children: [
       {
         path: '',
-        name: 'Main',
+        name: 'main',
         component: MainPage
       }
     ]
   },
+  {
+    path: '/counsel',
+    component: SubLayout,
+    children: [
+      {
+        path: '',
+        name: 'counsel',
+        component: WritePage
+      }
+    ]
+  },
+
+
+
 
   // {
   //   path: '/write',

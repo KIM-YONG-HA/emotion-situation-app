@@ -24,7 +24,7 @@
 
       <div class="mt-8 flex flex-wrap justify-center gap-4">
         <a
-          href="/write"
+          href="/counsel"
           class="w-48 h-16 bg-blue-700 text-white rounded-lg flex items-center justify-center space-x-2 font-bold text-base hover:bg-blue-800 transition duration-200 shadow-md"
         >
           <i class="fas fa-pencil-alt text-xl"></i>
